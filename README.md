@@ -1,31 +1,41 @@
-# paySmartChallenge
+# 🎬 Movies App
 
-As a mobile engineer you've been tasked with the development of an app for cinephiles and movie hobbyists. This first version (MVP) of the app will be very simple and limited to show the list of upcoming movies. The app will be fed with content from The Movie Database (TMDb). If no design specs were given, you're free to follow your UX and UI personal preferences.
+Aplicativo Flutter para listagem de filmes em cartaz, com suporte a cache local, busca e atualização manual dos dados.
 
-## Functional Requirements
+---
 
-This release of the app will be very limited in scope, but will serve as the foundation for future releases. It's expected that user will be able to:
+## 🚀 Tecnologias utilizadas
 
-● Scroll through the list of upcoming movies - including movie name, poster or backdrop image, genre and release date. List should not be limit to show only the first 20 movies as returned by the API, the user should be able to infinitely scroll trought it.
+- Flutter
+- Riverpod (StateNotifier)
+- Dio
+- Hive (cache local)
+- Clean Architecture
+- TMDB API
 
-● Select a specific movie to see details (name, poster image, genre, overview and release date).
+---
 
-● Persist movie information on the device (Optional).
+## 📱 Funcionalidades
 
-● Search for movies by entering a partial or full movie name (Optional).
+- Listagem de filmes
+- Paginação infinita
+- Pull to refresh
+- Atualização manual via botão
+- Cache offline com Hive
+- Busca de filmes
+- Detalhes do filme (gêneros, sinopse, lançamento)
 
-## Technical Requirements
+---
 
-You should see this project as an opportunity to create an app following modern development best practices, but also feel free to use your own app architecture preferences (coding standards, code organization, third-party libraries, etc).
+## 🔐 Configuração da API
 
-The API documentation and examples of use can be found here: https://developers.themoviedb.org/3
+Este projeto utiliza a **TMDB API**.
 
-Developers are **not allowed** to use any already available *IMDB SDK*, an HTTP client for the API is expected to be written from scratch.
+A chave da API é passada via `--dart-define` para evitar exposição no código.
 
-The application should be **written in flutter and should run on an Android device**. The development will be devided into two fases. The engineers are free to choose any architecture to structure the app.
+### ▶️ Como rodar o projeto
 
-Unit tests are not required, but highly appreciated.
-
-Developers should fork this repository as a starting point.
-
+```bash
+flutter pub get
+flutter run --dart-define=TMDB_API_KEY=SUA_API_KEY
 
